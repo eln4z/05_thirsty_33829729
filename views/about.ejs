@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>About <%= shopName %>
+    </title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <h1>About <%= shopName %>
+    </h1>
+
+    <p>We’re a friendly student-run shop serving refreshing drinks for every occasion.</p>
+
+    <h2>Our Shop Locations</h2>
+    <ul>
+        <% if (shops && shops.length> 0) { %>
+            <% for (let i=0; i < shops.length; i++) { %>
+                <li>
+                    <strong>
+                        <%= shops[i].name %>
+                    </strong><br>
+                    Manager: <%= shops[i].manager %><br>
+                        Address: <%= shops[i].address %>
+                </li>
+                <% } %>
+                    <% } else { %>
+                        <li>No shop data available.</li>
+                        <% } %>
+    </ul>
+
+    <p>
+        <a href="/">Home</a> |
+        <a href="/search">Search</a> |
+        <a href="/register">Register</a> |
+        <a href="/survey">Survey</a>
+    </p>
+</body>
+
+</html>

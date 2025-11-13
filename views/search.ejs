@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Search - <%= shopName %>
+    </title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <h1>Search the <%= shopName %> menu</h1>
+
+    <!-- Search form (GET) -->
+    <form action="/search_result" method="GET">
+        <label for="search_box">Keyword:</label>
+        <input id="search_box" type="text" name="search_text" required />
+
+        <label for="category_box">Category:</label>
+        <input id="category_box" type="text" name="category" />
+
+        <input type="submit" value="OK" />
+    </form>
+
+    <p>
+        <a href="/">Home</a> |
+        <a href="/about">About</a> |
+        <a href="/register">Register</a> |
+        <a href="/survey">Survey</a>
+    </p>
+</body>
+
+</html>

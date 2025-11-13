@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        <%= shopName %> - Home
+    </title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <h1>Welcome to <%= shopName %>!</h1>
+    <h2>Here are some of the things we sell:</h2>
+
+    <ul>
+        <% for (let i=0; i < productCategories.length; i++) { %>
+            <li>
+                <%= productCategories[i] %>
+            </li>
+            <% } %>
+    </ul>
+
+    <p>
+        <a href="/">Home</a> |
+        <a href="/about">About</a> |
+        <a href="/search">Search</a> |
+        <a href="/register">Register</a> |
+        <a href="/survey">Survey</a>
+    </p>
+</body>
+
+</html>
